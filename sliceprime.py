@@ -1,4 +1,5 @@
-print('''Note: In the output, there will be a list of strings indicating the value of the number in base n (to support bases more than 36), and then the base 10 value of it.''')
+print('''Note: In the output, there will be a list of strings indicating the value of the number in base n (to support bases more than 36), and then the base 10 value of it.\n
+However, if you enter a base less than 36, this will still support letters.\n''')
 
 while True:
     base = input("Enter your base: ")
@@ -31,7 +32,10 @@ def b2n(n: list[str] | str):
             sum += int(m[i]) * (base ** i)
         return sum
 
-prits = [[str(i)] for i in range(base) if isPrime(i)]
+if base <= 36:
+    prits = [i for i in ['2', '3', '5', '7', 'B', 'D', 'H', "J", "N", "T", "V"] if int(i, base = 36) < base]
+else:
+    prits = [[str(i)] for i in range(base) if isPrime(i)]
 # prits stand for prime digits
 sliceprimes = prits.copy()
 digits = 1
@@ -43,14 +47,14 @@ while True:
         if len(i) != digits: continue
         for j in prits:
             satisfy = True
-            new = i + j
+            new = i + j # type: ignore
             for k in range(len(new)):
                 if not isPrime(b2n(new[k:])):
                     satisfy = False
                     break
             if satisfy:
                 sliceprimes.append(new)
-                if len(sliceprimes[sliceprimes.index(i) + 1]) == digits + 1:
+                if len(sliceprimes[sliceprimes.index(i) + 1]) == digits + 1: # type: ignore
                     digits += 1
                 if new in sliceprimes: doExit = True
     if doExit: break
