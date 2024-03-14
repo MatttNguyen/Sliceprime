@@ -2,8 +2,8 @@ Recently, somebody (Michael) from a Math server proposed an interesting set of i
 Zairus and I settled on the name "Sliceprimes". This is the same sequence as the  OEIS sequence A085823 https://oeis.org/A085823.
 The usage of this code is quite intuitive. First the base is taken as input and the Sliceprimes in the sequence are listed.
 
-More Information:
-Contact me in Discord with the username 'matttnguyen'
-Contact Michael (who proposed the problem) in Discord with the username 'michael229719'
-Contact Zairus (who wrote this README.md for me) in Discord with the username '.zairus'
-The server in which this was discussed was 'Geometry Discord' by finnboltz (usename: 'finnboltz').
+Contect Information:
+Me : 'matttnguyen' (Discord)
+Michael (who proposed the problem): 'michael229719' (Discord)
+Zairus (who wrote this README.md for me): '.zairus' (Discord)
+The server in which this was discussed: 'Geometry Discord' by finnboltz (username: 'finnboltz'): https://discord.gg/UMXS6GzQDp
