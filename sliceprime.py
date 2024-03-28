@@ -51,7 +51,7 @@ def sliceprimes(base):
     return sliceprimes
 
 if __name__ == "__main__":
-    print('''Note: In the output, there will be a list of strings indicating the value of the number in base n (to support bases more than 36), and then the base 10 value of it.\n
+    print('''Note: In the output, there will be a list of strings indicating the value of the number in base n (to support bases more than 36)\n
     However, if you enter a base less than 36, this will still support letters.\n''')
 
     while True:
