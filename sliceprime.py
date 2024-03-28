@@ -7,7 +7,7 @@ def sliceprimes(base):
                 return False
         return True
 
-    def b2n(n: list[str] | str, base):
+    def b2n(n: list[str] | str, base = base):
         '''
     Convert any base in to base 10'''
         if type(n) == str:
@@ -30,8 +30,8 @@ def sliceprimes(base):
     while True:
         if len(prits) == 0: break
         doExit = False
+        old_digits = digits
         for i in sliceprimes:
-            old_digits = digits
             if len(i) != digits: continue
             for j in prits:
                 satisfy = True
@@ -45,22 +45,9 @@ def sliceprimes(base):
                     if len(sliceprimes[sliceprimes.index(i) + 1]) == digits + 1: # type: ignore
                         digits += 1
                     if new in sliceprimes: doExit = True
-            if digits == old_digits: doExit = True
-        if doExit: break
-
-    def remove_duplicates(list_of_lists):
-        seen_set = set()
-        result_list_of_lists = []
-
-        for inner_list in list_of_lists:
-            tuple_representation = tuple(inner_list)
-            if tuple_representation not in seen_set:
-                seen_set.add(tuple_representation)
-                result_list_of_lists.append(inner_list)
-
-        return result_list_of_lists
-
-    sliceprimes = remove_duplicates(sliceprimes)
+        if digits == old_digits or doExit: break
+        
+    sliceprimes.sort(key = b2n)
     return sliceprimes
 
 if __name__ == "__main__":
@@ -77,7 +64,7 @@ if __name__ == "__main__":
         except Exception:
             print("Invalid input. Please try again.")
 
-    # Print the list out
+    # Output
     found = sliceprimes(base)
     for i in found: print(i)
 
