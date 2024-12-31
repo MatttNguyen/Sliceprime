@@ -45,3 +45,5 @@ print(len(sliceprime(420)))
 t2 = time.time()
 
 print(t2 - t1)
+
+# 3.64s

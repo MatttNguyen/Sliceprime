@@ -48,5 +48,4 @@ def sliceprimes(base):
 
 print(len(sliceprimes(420)))
 
-# for n in range(100, 1001):
-#     print(n, len(sliceprimes(n)))
+# NA: Took too long

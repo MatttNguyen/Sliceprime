@@ -46,3 +46,5 @@ def sliceprime(n):
     return len(ps)
 
 print(sliceprime(30))
+
+# NA: Doesnt support bases higher than 36
