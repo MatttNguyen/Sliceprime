@@ -5,6 +5,7 @@
 #include <queue>
 #include <algorithm>
 #include <cmath>
+#include "gmpxx.h"
 
 using namespace std;
 
@@ -22,19 +23,9 @@ string to_st(ll num, ll b) {
 }
 
 bool isPrime(int n) { // Using: Sieve of Eratosthenes
-    vector<bool> A(n + 1, true);
-    for (int i = 2; i <= ceil(sqrt(n)); ++i) {
-        if (A[i - 2]) {
-            int j = 0;
-            while (i * i + j * i <= n) {
-                A[i * i + j * i - 2] = false;
-                j++;
-                if (!A[n - 2]) return false;
-            }
-        }
-    }
-    A = {}; // To save space, ig
-    return true;
+    mpz_class num(n);
+    int prime = mpz_probab_prime_p(num.get_mpz_t(), 20);
+    return (prime == 1 or prime == 2);
 }
 
 vector<ll> sliceprime(ll n) {
