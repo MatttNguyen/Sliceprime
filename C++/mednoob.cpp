@@ -2,10 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <queue>
-#include <algorithm>
 #include <cmath>
 #include "gmpxx.h"
+#include <time.h>
 
 using namespace std;
 
@@ -67,8 +66,16 @@ vector<ll> sliceprime(ll n) {
 }
 
 int main() {
-    ll test = 100;
-    cout << size(sliceprime(test));
+
+    double time1 = (double) clock() / CLOCKS_PER_SEC;
+
+    ll test = 420;
+    cout << size(sliceprime(test)) << endl;
+
+    double time2 = (double) clock() / CLOCKS_PER_SEC;
+
+    cout << time2 - time1;
+
     return 0;
 }
 

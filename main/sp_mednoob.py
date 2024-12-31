@@ -40,7 +40,7 @@ def sliceprime(n):
 
 t1 = time.time()
 
-print(len(sliceprime(100)))
+print(len(sliceprime(420)))
 
 t2 = time.time()
 
