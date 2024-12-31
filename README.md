@@ -1,9 +1,27 @@
-Recently, somebody (Michael) from a Math server proposed an interesting set of integers - where in each integer's substrings are primes. He had analyzed the sequence till base 12, and asked one of my friend (Zairus) to create a code to analyze it in any base. Soon I joined in and completed the code.
-Zairus and I settled on the name "Sliceprimes". This is the same sequence as the  OEIS sequence A085823 https://oeis.org/A085823.
-The usage of this code is quite intuitive. First the base is taken as input and the Sliceprimes in the sequence are listed.
+# What are sliceprimes?
 
-Contect Information:
-Me : 'matttnguyen' (Discord)
-Michael (who proposed the problem): 'michael229719' (Discord)
-Zairus (who wrote this README.md for me): '.zairus' (Discord)
-The server in which this was discussed: 'Geometry Discord' by finnboltz (username: 'finnboltz'): https://discord.gg/UMXS6GzQDp
+Sliceprime is a prime such that any substring of that number is also a prime
+
+For example, `373` is a sliceprime because `3`, `7`, `37`, `73`, `373` are all primes. However, `727` is not a sliceprime because although `2` is a prime, `72` is a composite number.
+
+Every sliceprimes in base 10 are `2`, `3`, `5`, `7`, `23`, `37`, `53`, `73`, `373`.
+
+# What is the "sliceprime" problem?
+
+Given base `n`, calculate how many sliceprimes are there in base `n`.
+
+Example: Base `10` has 9 sliceprimes
+
+Some bases has so much sliceprimes even the best solution so far (made by mednoob) takes 10 minutes to calculate.
+
+# What are all the files for?
+
+Folder "Original" contains all the files from the old repository.
+Folder "main" contains different approaches for the sliceprime problem.
+Folder "Prime tests" contains different (Python) implementations of primarity tests.
+Folder "C++" contains the C++ version of some files in the previous folders.
+Folder "Results" contains .txt files of some bases we found.
+
+# Contributions
+
+If you have any problems, contact me at matttnguyen2@gmail.com or matttnguyen on Discord (I'm much more active there)
