@@ -21,7 +21,7 @@ string to_st(ll num, ll b) {
     return st;
 }
 
-bool isPrime(int n) { // Using: Sieve of Eratosthenes
+bool isPrime(int n) {
     mpz_class num(n);
     int prime = mpz_probab_prime_p(num.get_mpz_t(), 20);
     return (prime == 1 or prime == 2);

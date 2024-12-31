@@ -14,12 +14,20 @@ Example: Base `10` has 9 sliceprimes
 
 Some bases has so much sliceprimes even the best solution so far (made by mednoob) takes 10 minutes to calculate.
 
+# Prequisites
+
+A C++ compiler with GMP (In case you want to run C++ files)
+
 # What are all the files for?
 
 Folder "Original" contains all the files from the old repository.
+
 Folder "main" contains different approaches for the sliceprime problem.
+
 Folder "Prime tests" contains different (Python) implementations of primarity tests.
+
 Folder "C++" contains the C++ version of some files in the previous folders.
+
 Folder "Results" contains .txt files of some bases we found.
 
 # Contributions

@@ -11,7 +11,7 @@ def sliceprime(n: int):
 
 t1 = time.time()
 
-print(len(sliceprime(420)))
+print(len(sliceprime(2100)))
 
 t2 = time.time()
 
